@@ -4,14 +4,12 @@ window.addEventListener('DOMContentLoaded', init);
 
 
 function init() {
-
-  console.log(document.getElementById("horn-select"));
-  console.log(document.querySelector('#expose').childNodes[11]);
   // TODO
+
   const hornSelect = document.getElementById("horn-select");
   const imgSelect = document.querySelector('#expose').childNodes[3];
   const audioSelect = document.querySelector('#expose').childNodes[11];
-  console.log(audioSelect.src);
+
   hornSelect.addEventListener("change", (event) => {
     imgSelect.src = "assets/images/" + hornSelect.value + ".svg";
     audioSelect.src = "assets/audio/" + hornSelect.value + ".mp3";
@@ -23,7 +21,7 @@ function init() {
 
   volVal.addEventListener("change", (event) => {
     const currVol = volVal.value;
-    console.log(currVol);
+    
     if(currVol == 0) {
       volImg.src = "assets/icons/volume-level-0.svg";
     }
