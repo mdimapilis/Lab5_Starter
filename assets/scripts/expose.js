@@ -21,18 +21,23 @@ function init() {
 
   volVal.addEventListener("change", (event) => {
     const currVol = volVal.value;
-    
+    audioSelect.volume = 0;
+
     if(currVol == 0) {
       volImg.src = "assets/icons/volume-level-0.svg";
+      audioSelect.volume = currVol / 100;
     }
     else if(currVol > 0 && currVol < 33) {
       volImg.src = "assets/icons/volume-level-1.svg";
+      audioSelect.volume = currVol / 100;
     }
     else if(currVol > 32 && currVol < 67) {
       volImg.src = "assets/icons/volume-level-2.svg";
+      audioSelect.volume = currVol / 100;
     }
     else if(currVol > 66 && currVol <= 100) {
       volImg.src = "assets/icons/volume-level-3.svg";
+      audioSelect.volume = currVol / 100;
     }
   });
 
