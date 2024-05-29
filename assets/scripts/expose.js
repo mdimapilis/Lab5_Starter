@@ -19,7 +19,7 @@ function init() {
   const volVal = vol.childNodes[1];
   const volImg = vol.childNodes[3];
 
-  volVal.addEventListener("change", (event) => {
+  volVal.addEventListener("input", (event) => {
     const currVol = volVal.value;
     audioSelect.volume = 0;
 
